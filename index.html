@@ -1,194 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="IMG_4262.PNG">
-    <title>Sara BDW</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <title>Sara Barthel de Weydenthal</title>
+  <style>
+    /* Reset + Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(270deg, #ff7e5f, #feb47b, #a855f7, #9333ea);
+      background-size: 800% 800%;
+      animation: gradientFlow 20s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ff7e5f;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .hero h2 span {
+      color: #ff7e5f;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      color: #000;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff7e5f;
+      color: #fff;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills, .projects, .experience {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card img.logo {
+      width: 50px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.8);
+    }
+
+    .contact a {
+      color: #fff;
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .contact a:hover {
+      color: #ff7e5f;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Sara B.</h1>
     <nav>
-
-        <a href="#about" class="navigation">about me</a>
-        <a href="#project"class="navigation">projects</a>
-        <a href="#work-exp"class="navigation">work experience</a>
-        <a href= "Sara Barthel de Weydenthal resume.pdf"target="_blank"class="navigation">résumé</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-   
-<!--about me-->
-<h1 id="about"  style="color:#abd9fb">About me </h1>
-    <div class="container">
-        <img src="wave.PNG"/>
-        
-   
-    <div class="bio">
-       <h2 style="color:#bfe0fa;font-size: 40px;">Hello, I'm Sara!</h2>
-        <p style="color:#e3f1fa">I'm a programmer from Warsaw most interested in web development
-           and artificial intelligence. I started coding through a Girls Code Fun course in 2015 
-           and have since gained certificates in iOS development from Udemy and Artificial Intelligence from InspiritAI.
-           When I'm not coding, I love reading detective novels or dancing to K-pop songs.
-        </p>
-        <p style="color:#e3f1fa">Here are the technologies I have recently been working with:</p>
-        <ul style="color:#e3f1fa; font-size: 25px;">
-          <li>jQuery</li>
-          <li>Bootstrap</li>
-          <li>JavaScript</li>
-          <li>CSS</li>
-          <li>HTML</li>
-          <li>Swift and SwiftUI</li>
-          <li>Python</li>
-        </ul>
-        </div>
-    </div>
-<!--projects-->
-    <h1 id="project" style="color:#bfe0fa; margin-left: 8%; margin-top: 20%">Projects </h1>
+  </header>
 
-<div class="row">
-    <div class= "column">
-        <div class="card" >
-           <a href="https://kasatoklasa.com/"> <img src="icons8-geography-50.png" style="padding:5%; padding-right:10%"></a>
-            <h2 style="padding:10%;">Kasa to klasa</h2>
-            <p style="padding-right:10%; padding-left:10%; padding-bottom:10%;">
-              A website built with HTML, JavaScript and CSS to foster economic literacy among Polish youth.
-            </p>
-        </div>
-    </div>
- 
-    <div class= "column">
-        <div class="card" >
-            <img src="icons8-geography-50.png" style="padding:5%; padding-right:10%">
-            <h2 style="padding:10%;">Facial emotion detection AI</h2>
-            <p style="padding-right:10%; padding-left:10%; padding-bottom:10%;">
-              I built preliminary models using KNN and Logistic Regression. 
-              I achieved an accuracy of 70% after coding a convolutional neural network.
-            </p>
-        </div>
-    </div>
-  
-    <div class= "column">
-        <div class="card" >
-            <img src="icons8-geography-50.png" style="padding:5%; padding-right:10%">
-            <h2 style="padding:10%;">Stock Price Prediction AI</h2>
-            <p style="padding-right:10%; padding-left:10%; padding-bottom:10%;">
-              I used an LSTM neural network and the yfinance API to predict future stock prices based on historical data.
-               The highest accuracy was 70%.
-            </p>
-        </div>
-    </div>
+  <section class="hero">
+    <img src="IMG_4262.PNG">
+    <h2>math&econ@uw by day, founder at night</h2>
+    <p>
+      I thrive at the intersection of fintech, AI, and quantum computing. 
+      Passionate about turning complex ideas into impactful solutions, 
+      I balance my studies in Mathematics and Economics at UW with building startups and coding innovative applications.
+    </p>
+    <a href="mailto:sarabdw@uw.edu" class="btn">Get in Touch</a>
+  </section>
 
-    <div class= "column">
-        <div class="card" >
-            <img src="icons8-geography-50.png" style="padding:5%; padding-right:10%">
-            <h2 style="padding:10%;">Algorithmic Trading Bot</h2>
-            <p style="padding-right:10%; padding-left:10%; padding-bottom:10%;">
-              I developed an algorithmic trading bot using the momentum strategy in Python.
-            </p>
-        </div>
+  <section id="skills">
+    <h3>Experience With</h3>
+    <div class="skills">
+      <div class="card">Python, R, SQL</div>
+      <div class="card">JavaScript / TypeScript</div>
+      <div class="card">React, Firebase</div>
+      <div class="card">PyTorch, TensorFlow</div>
+      <div class="card">Git, Hugging Face</div>
     </div>
+  </section>
 
-    <div class= "column">
-        <div class="card" >
-            <img src="icons8-geography-50.png" style="padding:5%; padding-right:5%">
-            <h2 style="padding:10%;">Yelp Review Sentiment Classification</h2>
-            <p style="padding-right:5%; padding-left:10%; padding-bottom:10%;">
-              I used Natural Language Processing (NLP) to perform sentiment analysis of Yelp restaurant reviews 
-              and classify them whether they were positive or negative.
-            </p>
-        </div>
-    </div>
-    <div class= "column">
-        <div class="card" >
-            <img src="icons8-geography-50.png" style="padding:5%; padding-right:10%">
-            <h2 style="padding:10%;">Breast Cancer Biopsy Classification</h2>
-            <p style="padding-right:10%; padding-left:10%; padding-bottom:10%;">
-              I developed a binary classification model using logistic regression to determine 
-              if a sample was benign or malignant.
-            </p>
-        </div>
-    </div>
-</div>
-<h1>Work Experience</h1>
-
-<div class="timeline" id="work-exp"></p> 
-  <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-    <div class="timeline__event__icon ">
-      <i class="lni-cake"></i>
-
-    </div>
-    <div class="timeline__event__date">
-      Crystal Equation 
-    </div>
- 
-    <div class="timeline__event__content ">
-      <div class="timeline__event__title">
-        Junior Data Operations Engineer @ Crystal Equation (data ops for Meta)
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>Financial Management App</h4>
+        <p>Cross-platform budgeting tool integrating real-time financial APIs, Firebase Firestore, and dynamic Chart.js dashboards.</p>
       </div>
-      <div class="timeline__event__description">
-        <ol>
-            <li>Data Engineering: I wrote a Python pipeline to perform SQL database analysis</li>
-            <li>Front-end development: resolved UI issues and modified Meta's internal tools</li>
-            <li>Back-end developmet: I did debugging and resolved exceptions in Hacklang</li>
-
-
-
-        </ol>
+      <div class="card">
+        <h4>Quantum ML Matching Algorithm</h4>
+        <p>Prototype algorithm for a social + dating app to optimize user engagement using quantum-inspired ML models.</p>
       </div>
     </div>
-  </div>
-  <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-    <div class="timeline__event__icon">
-      <i class="lni-burger"></i>
+  </section>
 
-    </div>
-    <div class="timeline__event__date">
-      Kids Code Fun
-    </div>
-    <div class="timeline__event__content">
-      <div class="timeline__event__title">
-        Programming Instructor
+  <section id="experience">
+    <h3>Experience</h3>
+    <div class="experience">
+      <div class="card">
+        <img src="gs.png" alt="Goldman Sachs Logo" class="logo">
+        <h4>Risk Summer Analyst @ Goldman Sachs</h4>
+        <p>Developed time-series models for liquidity behaviors, scenario simulations for credit risk pilots, and integrated analytics into client workflows.</p>
       </div>
-      <div class="timeline__event__description">
-        <ol>
-            <li>Instructed JavaScript, HTML, CSS weekly between 2020-2021 on beginner and intermediate levels (ages 9-14)</li>
-            <li>Held individual workshops on Arduino, Freecad, Python, HTML, CSS, JavaScript and Scratch at events (Meta's
-                 Przestrzeń, Google Campus, Women in Tech Summit, etc.)</li>
-        </ol>
+      <div class="card">
+        <div class="emoji">🌸</div>
+        <h4>Co-Founder & CEO @ Stealth Startup</h4>
+        <p>Built a prototype quantum ML matching algorithm, defined KPIs, and led cross-functional engineering and design teams.</p>
+      </div>
+      <div class="card">
+        <img src="webimpact.png" alt="Web Impact Logo" class="logo">
+        <h4>Fullstack Engineer & PM @ Web Impact UW</h4>
+        <p>Delivered a React/Firebase application adopted by 500+ UW students, collaborating with clients and stakeholders to solve real-world needs.</p>
       </div>
     </div>
-  </div>
-  <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-    <div class="timeline__event__icon">
-      <i class="lni-slim"></i>
+  </section>
 
-    </div>
-    <div class="timeline__event__date">
-        Girls Code Fun
-    </div>
-    <div class="timeline__event__content">
-      <div class="timeline__event__title">
-        Programming Instructor and intern
-      </div>
-      <div class="timeline__event__description">
-        <ol>
-          <li>Speaker @ Women in Tech Summit</li>
-          <li>Judge @ Edukaton</li>
-          <li>Instructed Python, Scratch and web development at individual events</li>
-          <li>Worked on designing social media posts</li>
-        </ol>
-      </div>
+  <section id="contact" class="contact">
+    <a href="mailto:sarabdw@uw.edu"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/sara-barthel-de-weydenthal" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Saras-Code" target="_blank"><i class="fab fa-github"></i></a>
+  </section>
 
-    </div>
-  </div>
-  
-
-</div>
-
-<footer>
-    <h5>Made with ❤️ by Sara</h5>
-</footer>
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
