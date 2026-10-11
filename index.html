@@ -1,245 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-  <title>Sara Barthel de Weydenthal</title>
-  <style>
-    /* Reset + Fonts */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    body {
-      color: #fff;
-      background: #000;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Animated Background */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(270deg, #ff7e5f, #feb47b, #a855f7, #9333ea);
-      background-size: 800% 800%;
-      animation: gradientFlow 20s ease infinite;
-      z-index: -1;
-    }
-
-    @keyframes gradientFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
-      background: rgba(0,0,0,0.7);
-      padding: 1rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      margin-left: 2rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ff7e5f;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      margin-bottom: 1rem;
-    }
-
-    .hero h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .hero h2 span {
-      color: #ff7e5f;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 1rem auto;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .btn {
-      margin-top: 1.5rem;
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #fff;
-      color: #000;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ff7e5f;
-      color: #fff;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .skills, .projects, .experience {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .card img.logo {
-      width: 50px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    .card .emoji {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .contact {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(0,0,0,0.8);
-    }
-
-    .contact a {
-      color: #fff;
-      margin: 0 1rem;
-      font-size: 1.5rem;
-      transition: 0.3s;
-    }
-
-    .contact a:hover {
-      color: #ff7e5f;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Sara B.</h1>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img src="IMG_4262.PNG">
-    <h2>math&econ@uw by day, founder at night</h2>
-    <p>
-      I thrive at the intersection of fintech, AI, and quantum computing. 
-      Passionate about turning complex ideas into impactful solutions, 
-      I balance my studies in Mathematics and Economics at UW with building startups and coding innovative applications.
-    </p>
-    <a href="mailto:sarabdw@uw.edu" class="btn">Get in Touch</a>
-  </section>
-
-  <section id="skills">
-    <h3>Experience With</h3>
-    <div class="skills">
-      <div class="card">Python, R, SQL</div>
-      <div class="card">JavaScript / TypeScript</div>
-      <div class="card">React, Firebase</div>
-      <div class="card">PyTorch, TensorFlow</div>
-      <div class="card">Git, Hugging Face</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h3>Projects</h3>
-    <div class="projects">
-      <div class="card">
-        <h4>Financial Management App</h4>
-        <p>Cross-platform budgeting tool integrating real-time financial APIs, Firebase Firestore, and dynamic Chart.js dashboards.</p>
-      </div>
-      <div class="card">
-        <h4>Quantum ML Matching Algorithm</h4>
-        <p>Prototype algorithm for a social + dating app to optimize user engagement using quantum-inspired ML models.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h3>Experience</h3>
-    <div class="experience">
-      <div class="card">
-        <img src="gs.png" alt="Goldman Sachs Logo" class="logo">
-        <h4>Risk Summer Analyst @ Goldman Sachs</h4>
-        <p>Developed time-series models for liquidity behaviors, scenario simulations for credit risk pilots, and integrated analytics into client workflows.</p>
-      </div>
-      <div class="card">
-        <div class="emoji">🌸</div>
-        <h4>Co-Founder & CEO @ Stealth Startup</h4>
-        <p>Built a prototype quantum ML matching algorithm, defined KPIs, and led cross-functional engineering and design teams.</p>
-      </div>
-      <div class="card">
-        <img src="webimpact.png" alt="Web Impact Logo" class="logo">
-        <h4>Fullstack Engineer & PM @ Web Impact UW</h4>
-        <p>Delivered a React/Firebase application adopted by 500+ UW students, collaborating with clients and stakeholders to solve real-world needs.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <a href="mailto:sarabdw@uw.edu"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/sara-barthel-de-weydenthal" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/Saras-Code" target="_blank"><i class="fab fa-github"></i></a>
-  </section>
-
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sara Barthel de Weydenthal | Founder, Posy Social</title>
+    <meta
+      name="description"
+      content="Polish-American mathematics and economics student at UW and Co-Founder &amp; CEO of Posy Social, a curated matchmaking app for real-life dates."
+    />
+    <meta name="theme-color" content="#6E1530" />
+    <link rel="canonical" href="https://sarabdew.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarabdew.github.io/" />
+    <meta property="og:title" content="Sara Barthel de Weydenthal | Founder, Posy Social" />
+    <meta
+      property="og:description"
+      content="Polish-American mathematics and economics student at UW and Co-Founder &amp; CEO of Posy Social, a curated matchmaking app for real-life dates."
+    />
+    <meta property="og:image" content="https://sarabdew.github.io/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600;700&family=Pinyon+Script&display=swap"
+    />
+    <link rel="preload" as="image" href="/memoji.png" />
+    <script type="module" crossorigin src="/assets/index-CwIlM1Uh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DAQLSM3n.css">
+  </head>
+  <body>
+    <script>document.documentElement.classList.add('js')</script>
+    <div id="root"><div class="scroll prerender"><div class="scroll__page"><article class="page page--burgundy page--right cover" data-page="1" aria-label="Page 1: Cover"><div class="page__inner"><div class="cover__hit"><p class="cover__top">Issue 01 · Seattle</p><h1 class="masthead">SARA<span class="sr-only"> Barthel de Weydenthal</span></h1><p class="cover__subtitle">The Barthel de Weydenthal Issue</p><div class="cover__stage"><div class="cover__star"><img class="cover__memoji" src="/memoji.png" alt="Sara&#x27;s memoji" loading="eager" decoding="async" draggable="false"/></div><ul class="cover__lines"><li class="cover__line cover__line--0">How a math paper turned into a dating app</li><li class="cover__line cover__line--1">220+ users, zero ad spend</li><li class="cover__line cover__line--2">From Goldman Sachs to PIMCO</li><li class="cover__line cover__line--3">Fashion, poetry and emerging tech</li></ul></div><div class="cover__bottom"><p>Mathematics · Founder · Product</p><div class="barcode" aria-hidden="true"><svg viewBox="0 0 233 40" preserveAspectRatio="none"><rect x="0" y="0" width="2" height="40"></rect><rect x="3" y="0" width="1" height="40"></rect><rect x="6" y="0" width="1" height="40"></rect><rect x="8" y="0" width="1" height="40"></rect><rect x="10" y="0" width="1" height="40"></rect><rect x="12" y="0" width="1" height="40"></rect><rect x="14" y="0" width="3" height="40"></rect><rect x="19" y="0" width="3" height="40"></rect><rect x="23" y="0" width="2" height="40"></rect><rect x="26" y="0" width="3" height="40"></rect><rect x="30" y="0" width="3" height="40"></rect><rect x="35" y="0" width="3" height="40"></rect><rect x="39" y="0" width="2" height="40"></rect><rect x="42" y="0" width="1" height="40"></rect><rect x="45" y="0" width="1" height="40"></rect><rect x="47" y="0" width="3" height="40"></rect><rect x="52" y="0" width="2" height="40"></rect><rect x="55" y="0" width="1" height="40"></rect><rect x="58" y="0" width="2" height="40"></rect><rect x="61" y="0" width="1" height="40"></rect><rect x="63" y="0" width="2" height="40"></rect><rect x="67" y="0" width="1" height="40"></rect><rect x="70" y="0" width="2" height="40"></rect><rect x="73" y="0" width="1" height="40"></rect><rect x="76" y="0" width="1" height="40"></rect><rect x="79" y="0" width="2" height="40"></rect><rect x="82" y="0" width="3" height="40"></rect><rect x="87" y="0" width="2" height="40"></rect><rect x="91" y="0" width="3" height="40"></rect><rect x="95" y="0" width="2" height="40"></rect><rect x="99" y="0" width="3" height="40"></rect><rect x="104" y="0" width="2" height="40"></rect><rect x="108" y="0" width="1" height="40"></rect><rect x="110" y="0" width="3" height="40"></rect><rect x="114" y="0" width="2" height="40"></rect><rect x="118" y="0" width="3" height="40"></rect><rect x="122" y="0" width="1" height="40"></rect><rect x="125" y="0" width="2" height="40"></rect><rect x="129" y="0" width="3" height="40"></rect><rect x="133" y="0" width="2" height="40"></rect><rect x="136" y="0" width="3" height="40"></rect><rect x="140" y="0" width="3" height="40"></rect><rect x="144" y="0" width="1" height="40"></rect><rect x="147" y="0" width="2" height="40"></rect><rect x="151" y="0" width="3" height="40"></rect><rect x="155" y="0" width="2" height="40"></rect><rect x="158" y="0" width="3" height="40"></rect><rect x="162" y="0" width="2" height="40"></rect><rect x="165" y="0" width="1" height="40"></rect><rect x="168" y="0" width="2" height="40"></rect><rect x="171" y="0" width="3" height="40"></rect><rect x="176" y="0" width="2" height="40"></rect><rect x="180" y="0" width="3" height="40"></rect><rect x="184" y="0" width="3" height="40"></rect><rect x="188" y="0" width="2" height="40"></rect><rect x="191" y="0" width="3" height="40"></rect><rect x="196" y="0" width="2" height="40"></rect><rect x="200" y="0" width="2" height="40"></rect><rect x="203" y="0" width="3" height="40"></rect><rect x="207" y="0" width="2" height="40"></rect><rect x="211" y="0" width="3" height="40"></rect><rect x="215" y="0" width="2" height="40"></rect><rect x="219" y="0" width="1" height="40"></rect><rect x="221" y="0" width="3" height="40"></rect><rect x="225" y="0" width="3" height="40"></rect><rect x="229" y="0" width="2" height="40"></rect></svg><span>0 12026 00101 7</span></div></div></div><div class="cover__sheen" aria-hidden="true"></div></div></article></div><div class="scroll__page"><article class="page page--cream page--left contents" data-page="2" aria-label="Page 2: Contents"><div class="page__inner"><h2 class="contents__title">Contents</h2><p class="contents__issue">Issue 01</p><ol class="contents__list"><li><a href="#posy" class="contents__link"><span class="contents__folio">04</span><span class="contents__name">Cover Story: Posy</span></a></li><li><a href="#work" class="contents__link"><span class="contents__folio">06</span><span class="contents__name">Work</span></a></li><li><a href="#projects" class="contents__link"><span class="contents__folio">07</span><span class="contents__name">Projects</span></a></li><li><a href="#style" class="contents__link"><span class="contents__folio">08</span><span class="contents__name">Fashion Scholarship Fund</span></a></li><li><a href="#contact" class="contents__link"><span class="contents__folio">09</span><span class="contents__name">Say Hi</span></a></li></ol><footer class="folio" aria-hidden="true"><span class="folio__num">02</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--cream page--right letter" data-page="3" aria-label="Page 3: Editor&#x27;s Letter"><div class="page__inner"><p class="label">Editor&#x27;s Letter</p><div class="letter__head"><h2 class="headline headline--md">Hi, I&#x27;m Sara, and welcome to my website!</h2><img class="letter__memoji" src="/memoji.png" alt="" loading="lazy" decoding="async" draggable="false"/></div><div class="prose"><p class="has-dropcap "><span class="dropcap">I</span> grew up in Warsaw and now study Mathematics and Economics at the University of Washington. As a dual citizen of the US and Poland, I learned early to move between two ways of seeing the world, and I&#x27;ve been bridging worlds ever since: math and markets, tech and finance, analysis and creativity.</p><p>What I love most is connecting ideas across fields, and I want to put that, along with my entrepreneurial drive, toward building consumer products. Outside of work, you&#x27;ll find me immersed in fashion, writing poetry, or exploring the Pacific Northwest.</p></div><p class="signature" aria-hidden="true">Sara</p><p class="signoff">Sara Barthel de Weydenthal, Editor-in-Chief</p><footer class="folio" aria-hidden="true"><span class="folio__num">03</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--burgundy page--left posy-stats" data-page="4" aria-label="Page 4: Posy by the numbers"><div class="page__inner"><div class="phone"><div class="phone__screen"><img class="" src="/posy-screen.png" alt="The Posy app on iPhone" loading="lazy" decoding="async" draggable="false"/></div></div><div class="stats"><div class="stat"><p class="stat__num" aria-hidden="true">220<!-- -->+</p><p class="stat__label"><span class="sr-only">220<!-- -->+<!-- --> </span>users</p></div><div class="stat"><p class="stat__num" aria-hidden="true">50</p><p class="stat__label"><span class="sr-only">50<!-- --> </span>matches</p></div><div class="stat"><p class="stat__num" aria-hidden="true">35</p><p class="stat__label"><span class="sr-only">35<!-- --> </span>users surveyed</p></div><div class="stat"><p class="stat__num" aria-hidden="true">10<!-- -->%</p><p class="stat__label"><span class="sr-only">10<!-- -->%<!-- --> </span>top of YC Fall 2026 applicants</p></div></div><footer class="folio" aria-hidden="true"><span class="folio__num">04</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--cream page--right posy-story" data-page="5" aria-label="Page 5: Cover Story: Posy"><div class="page__inner"><p class="label">Cover Story</p><h2 class="headline headline--lg">How a math paper turned into a dating app</h2><p class="subhead">Co-Founder &amp; CEO, Posy Social Inc. · Feb 2025 to present · Seattle</p><div class="prose prose--cols"><p class="has-dropcap "><span class="dropcap">I</span> co-founded Posy and built it end to end: I wrote the product spec for every feature and user flow, ran sprint planning and reviews, and shipped a three-tier app (React Native, Firebase, Python) with my co-founder, built on a compatibility algorithm adapted from my graph theory research.</p><p>A 35-user survey and a two-month closed beta set the roadmap. Posy grew from 0 to 220+ users and 50 matches at UW, placed in the top 10% of Y Combinator Fall 2026 applicants, and was featured in The Daily.</p></div><div class="btn-row"><a class="btn btn--solid " href="https://apps.apple.com/us/app/posy-dating/id6757773162" target="_blank" rel="noopener">Download Posy</a><a class="btn btn--solid " href="https://drive.google.com/file/d/1QahR5AsCooDNUJF5oY2LuMIYVnlfDGUM/view?usp=sharing" target="_blank" rel="noopener">Watch the demo</a><a class="btn btn--solid " href="https://www.dailyuw.com/article/student-built-app-posy-enters-the-seattle-dating-scene-20260526" target="_blank" rel="noopener">Read The Daily&#x27;s article</a><a class="btn btn--outline " href="mailto:saraannabdw@gmail.com?subject=Posy%20deck">Investors: request our deck</a></div><footer class="folio" aria-hidden="true"><span class="folio__num">05</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--cream page--left work-list work-page" data-page="6" aria-label="Page 6: Work"><div class="page__inner"><p class="label">Work</p><h2 class="headline headline--md">Where I&#x27;ve worked</h2><ol class="roles"><li class="role"><p class="role__year">2026</p><div><h3 class="role__company">PIMCO</h3><p class="role__meta">Product Strategy Summer Analyst<!-- --> · <!-- -->Newport Beach, CA</p><p class="role__line">Built the business case for a new ETF and authored the team&#x27;s AI strategy roadmap on Microsoft Copilot.</p></div></li><li class="role"><p class="role__year">2025</p><div><h3 class="role__company">Goldman Sachs</h3><p class="role__meta">Summer Analyst<!-- --> · <!-- -->New York, NY</p><p class="role__line">Modeled deposit betas and stress-tested credit risk scenarios in Transaction Banking.</p></div></li><li class="role"><p class="role__year">2025</p><div><h3 class="role__company">Dorm Room Fund</h3><p class="role__meta">Venture Capital Fellow<!-- --> · <!-- -->Remote</p><p class="role__line">Sourced and evaluated student-led startups.</p></div></li><li class="role"><p class="role__year">2022</p><div><h3 class="role__company">Crystal Equation (Meta)</h3><p class="role__meta">Junior Data Operations Engineer<!-- --> · <!-- -->Warsaw, Poland</p><p class="role__line">Built Python data pipelines and Presto SQL analytics for global product teams.</p></div></li></ol><div class="btn-row"><a class="btn btn--solid " href="resume.pdf" target="_blank" rel="noopener">My resume (PDF)</a><a class="btn btn--solid " href="https://www.linkedin.com/in/sara-barthel-de-weydenthal" target="_blank" rel="noopener">LinkedIn</a></div><footer class="folio" aria-hidden="true"><span class="folio__num">06</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--cream page--right projects" data-page="7" aria-label="Page 7: Projects"><div class="page__inner"><p class="label">Projects</p><h2 class="headline headline--md">Things I&#x27;ve built</h2><ul class="columns"><li class="column"><h3 class="column__name">Kids Code Fun / Girls Code Fun</h3><p class="role__meta">Coding Instructor &amp; Curriculum Developer · Jan 2018 to Jun 2021</p><p class="product__line">Taught weekly coding classes to students ages 8 to 16 and designed the curriculum.</p></li><li class="column"><h3 class="column__name">Web Impact UW</h3><p class="role__meta">Product Manager &amp; Engineer · Jan 2024 to Jul 2024</p><p class="product__line">Led a 5-person team building a full-stack educational web app (React, Firebase).</p></li><li class="column"><h3 class="column__name">PhysicsBeyond</h3><p class="role__meta">Quantum Computing Research Scholar · Apr 2024 to Jun 2024</p><p class="product__line">Quantum neural networks on IBM hardware that beat classical ML sales forecasts by 15%.</p><a class="btn btn--text " href="https://github.com/Saras-Code/iqrg" target="_blank" rel="noopener">GitHub</a></li><li class="column"><h3 class="column__name">UW Department of Mathematics</h3><p class="role__meta">Mathematics Researcher · Jan 2024 to Mar 2024</p><p class="product__line">Modeled matchmaking with graph theory in Python; the basis for Posy&#x27;s engine.</p><a class="btn btn--text " href="https://drive.google.com/file/d/1MWI40mSaprWfuS9-9A6hmHMArJJhNxjt/view?usp=sharing" target="_blank" rel="noopener">Paper</a></li><li class="column"><h3 class="column__name">UW CareerWomin</h3><p class="role__meta">Founder &amp; President</p><p class="product__line">Grew it from zero to 149+ members in 6 months.</p></li></ul><footer class="folio" aria-hidden="true"><span class="folio__num">07</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--cream page--left style-page" data-page="8" aria-label="Page 8: Fashion Scholarship Fund"><div class="page__inner"><p class="label">Style</p><h2 class="headline headline--md">Fashion Scholarship Fund</h2><p class="prose">Named a Fashion Scholarship Fund scholar in 2025 and 2026.</p><ul class="cases"><li><a class="case" href="https://drive.google.com/file/d/1qY2NbgS7XlgdU1ci67PSCq0tVDCfVIc6/view?usp=sharing" target="_blank" rel="noopener"><img class="case__img" src="/fsf-2026.png" alt="2026 Fashion Scholarship Fund case study: Be My Valentino: Raya x Valentino" loading="lazy" decoding="async" draggable="false"/><span class="case__year">2026</span><span class="case__name">Be My Valentino: Raya x Valentino</span></a></li><li><a class="case" href="https://drive.google.com/file/d/1fWYJC7nfUNiDnbxytJeNgRGQQdM2XYyw/view?usp=sharing" target="_blank" rel="noopener"><img class="case__img" src="/fsf-2025.png" alt="2025 Fashion Scholarship Fund case study: DKNY: You Can&#x27;t Spell It Girl Without I.T." loading="lazy" decoding="async" draggable="false"/><span class="case__year">2025</span><span class="case__name">DKNY: You Can&#x27;t Spell It Girl Without I.T.</span></a></li></ul><p class="label">Also honored</p><ul class="also"><li><span class="also__role">Top Analyst<!-- -->,</span> <span class="also__org">UW Investment Group</span></li><li><span class="also__role">Speaker<!-- -->,</span> <span class="also__org">Perspektywy Women in STEM Summit</span></li></ul><footer class="folio" aria-hidden="true"><span class="folio__num">08</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--cream page--right contact-page" data-page="9" aria-label="Page 9: Say Hi"><div class="page__inner"><p class="label">Say Hi</p><h2 class="headline headline--lg">Want to learn more?</h2><p class="prose">Send me a message:</p><div class="btn-row"><a class="btn btn--solid " href="mailto:saraannabdw@gmail.com">saraannabdw@gmail.com</a><a class="btn btn--solid " href="resume.pdf" target="_blank" rel="noopener">My resume (PDF)</a><a class="btn btn--solid " href="https://www.linkedin.com/in/sara-barthel-de-weydenthal" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn--solid " href="https://github.com/Saras-Code" target="_blank" rel="noopener">GitHub</a></div><footer class="folio" aria-hidden="true"><span class="folio__num">09</span><span class="folio__mast">SARA</span></footer></div></article></div><div class="scroll__page"><article class="page page--burgundy page--left back" data-page="10" aria-label="Page 10: Back cover"><div class="page__inner"><p class="masthead masthead--back" aria-hidden="true">SARA</p><p class="back__footer">© 2026 Sara Barthel de Weydenthal. Designed and built with ❤️</p><div class="barcode" aria-hidden="true"><svg viewBox="0 0 204 40" preserveAspectRatio="none"><rect x="0" y="0" width="1" height="40"></rect><rect x="3" y="0" width="1" height="40"></rect><rect x="6" y="0" width="1" height="40"></rect><rect x="8" y="0" width="3" height="40"></rect><rect x="12" y="0" width="2" height="40"></rect><rect x="16" y="0" width="3" height="40"></rect><rect x="20" y="0" width="2" height="40"></rect><rect x="24" y="0" width="1" height="40"></rect><rect x="26" y="0" width="1" height="40"></rect><rect x="29" y="0" width="3" height="40"></rect><rect x="33" y="0" width="3" height="40"></rect><rect x="38" y="0" width="3" height="40"></rect><rect x="42" y="0" width="1" height="40"></rect><rect x="45" y="0" width="2" height="40"></rect><rect x="48" y="0" width="3" height="40"></rect><rect x="53" y="0" width="3" height="40"></rect><rect x="57" y="0" width="2" height="40"></rect><rect x="60" y="0" width="3" height="40"></rect><rect x="65" y="0" width="1" height="40"></rect><rect x="68" y="0" width="1" height="40"></rect><rect x="71" y="0" width="1" height="40"></rect><rect x="74" y="0" width="2" height="40"></rect><rect x="78" y="0" width="1" height="40"></rect><rect x="80" y="0" width="1" height="40"></rect><rect x="83" y="0" width="3" height="40"></rect><rect x="88" y="0" width="3" height="40"></rect><rect x="93" y="0" width="3" height="40"></rect><rect x="98" y="0" width="3" height="40"></rect><rect x="103" y="0" width="3" height="40"></rect><rect x="108" y="0" width="3" height="40"></rect><rect x="113" y="0" width="3" height="40"></rect><rect x="117" y="0" width="3" height="40"></rect><rect x="121" y="0" width="2" height="40"></rect><rect x="125" y="0" width="2" height="40"></rect><rect x="128" y="0" width="1" height="40"></rect><rect x="130" y="0" width="1" height="40"></rect><rect x="132" y="0" width="2" height="40"></rect><rect x="136" y="0" width="3" height="40"></rect><rect x="141" y="0" width="2" height="40"></rect><rect x="145" y="0" width="3" height="40"></rect><rect x="150" y="0" width="3" height="40"></rect><rect x="155" y="0" width="2" height="40"></rect><rect x="158" y="0" width="3" height="40"></rect><rect x="163" y="0" width="2" height="40"></rect><rect x="166" y="0" width="3" height="40"></rect><rect x="171" y="0" width="3" height="40"></rect><rect x="176" y="0" width="3" height="40"></rect><rect x="181" y="0" width="3" height="40"></rect><rect x="185" y="0" width="1" height="40"></rect><rect x="188" y="0" width="1" height="40"></rect><rect x="190" y="0" width="1" height="40"></rect><rect x="192" y="0" width="3" height="40"></rect><rect x="196" y="0" width="3" height="40"></rect><rect x="200" y="0" width="2" height="40"></rect></svg><span>0 12026 00101 7</span></div></div></article></div></div></div>
+  </body>
 </html>
