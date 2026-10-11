@@ -1,245 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-  <title>Sara Barthel de Weydenthal</title>
-  <style>
-    /* Reset + Fonts */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    body {
-      color: #fff;
-      background: #000;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Animated Background */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(270deg, #ff7e5f, #feb47b, #a855f7, #9333ea);
-      background-size: 800% 800%;
-      animation: gradientFlow 20s ease infinite;
-      z-index: -1;
-    }
-
-    @keyframes gradientFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
-      background: rgba(0,0,0,0.7);
-      padding: 1rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      margin-left: 2rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ff7e5f;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      margin-bottom: 1rem;
-    }
-
-    .hero h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .hero h2 span {
-      color: #ff7e5f;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 1rem auto;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .btn {
-      margin-top: 1.5rem;
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #fff;
-      color: #000;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ff7e5f;
-      color: #fff;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .skills, .projects, .experience {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .card img.logo {
-      width: 50px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    .card .emoji {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .contact {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(0,0,0,0.8);
-    }
-
-    .contact a {
-      color: #fff;
-      margin: 0 1rem;
-      font-size: 1.5rem;
-      transition: 0.3s;
-    }
-
-    .contact a:hover {
-      color: #ff7e5f;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Sara B.</h1>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img src="IMG_4262.PNG">
-    <h2>math&econ@uw by day, founder at night</h2>
-    <p>
-      I thrive at the intersection of fintech, AI, and quantum computing. 
-      Passionate about turning complex ideas into impactful solutions, 
-      I balance my studies in Mathematics and Economics at UW with building startups and coding innovative applications.
-    </p>
-    <a href="mailto:sarabdw@uw.edu" class="btn">Get in Touch</a>
-  </section>
-
-  <section id="skills">
-    <h3>Experience With</h3>
-    <div class="skills">
-      <div class="card">Python, R, SQL</div>
-      <div class="card">JavaScript / TypeScript</div>
-      <div class="card">React, Firebase</div>
-      <div class="card">PyTorch, TensorFlow</div>
-      <div class="card">Git, Hugging Face</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h3>Projects</h3>
-    <div class="projects">
-      <div class="card">
-        <h4>Financial Management App</h4>
-        <p>Cross-platform budgeting tool integrating real-time financial APIs, Firebase Firestore, and dynamic Chart.js dashboards.</p>
-      </div>
-      <div class="card">
-        <h4>Quantum ML Matching Algorithm</h4>
-        <p>Prototype algorithm for a social + dating app to optimize user engagement using quantum-inspired ML models.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h3>Experience</h3>
-    <div class="experience">
-      <div class="card">
-        <img src="gs.png" alt="Goldman Sachs Logo" class="logo">
-        <h4>Risk Summer Analyst @ Goldman Sachs</h4>
-        <p>Developed time-series models for liquidity behaviors, scenario simulations for credit risk pilots, and integrated analytics into client workflows.</p>
-      </div>
-      <div class="card">
-        <div class="emoji">🌸</div>
-        <h4>Co-Founder & CEO @ Stealth Startup</h4>
-        <p>Built a prototype quantum ML matching algorithm, defined KPIs, and led cross-functional engineering and design teams.</p>
-      </div>
-      <div class="card">
-        <img src="webimpact.png" alt="Web Impact Logo" class="logo">
-        <h4>Fullstack Engineer & PM @ Web Impact UW</h4>
-        <p>Delivered a React/Firebase application adopted by 500+ UW students, collaborating with clients and stakeholders to solve real-world needs.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <a href="mailto:sarabdw@uw.edu"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/sara-barthel-de-weydenthal" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/Saras-Code" target="_blank"><i class="fab fa-github"></i></a>
-  </section>
-
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sara Barthel de Weydenthal | Founder, Posy Social</title>
+    <meta
+      name="description"
+      content="Polish-American mathematics and economics student at UW and Co-Founder &amp; CEO of Posy Social, a curated matchmaking app for real-life dates."
+    />
+    <meta name="theme-color" content="#6E1530" />
+    <link rel="canonical" href="https://sarabdew.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarabdew.github.io/" />
+    <meta property="og:title" content="Sara Barthel de Weydenthal | Founder, Posy Social" />
+    <meta
+      property="og:description"
+      content="Polish-American mathematics and economics student at UW and Co-Founder &amp; CEO of Posy Social, a curated matchmaking app for real-life dates."
+    />
+    <meta property="og:image" content="https://sarabdew.github.io/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600;700&family=Pinyon+Script&display=swap"
+    />
+    <link rel="preload" as="image" href="/memoji.png" />
+  </head>
+  <body>
+    <script>document.documentElement.classList.add('js')</script>
+    <div id="root"><!--prerender--></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

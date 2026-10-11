@@ -1,0 +1,18 @@
+:root {
+  --paper: #f7f1ea;
+  --paper-deep: #efe6db;
+  --ink: #14213d;
+  --ink-soft: #3a4560;
+  --burgundy: #6e1530;
+  --burgundy-deep: #561024;
+  --blush: #f3c9d6;
+  --pink: #b8285f;
+  --desk: #e7ded3;
+
+  --serif: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --sans: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --script: 'Pinyon Script', 'Snell Roundhand', cursive;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --bar-h: 56px;
+}
